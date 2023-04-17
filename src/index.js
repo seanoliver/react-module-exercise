@@ -6,3 +6,13 @@
 // Log the message “Delicious! May I have another?”
 // Remove the fruit from the array of fruits
 // Log the message “I’m sorry, we’re all out. We have FRUITSLEFT left.”
+
+import { fruits } from "./foods.js";
+import { choice, remove } from "./helpers.js";
+
+let randomFruit = choice(fruits);
+console.log(`I'd like one ${randomFruit}, please.`);
+console.log(`Here you go: ${randomFruit}`);
+console.log(`Delicious! May I have another?`);
+remove(fruits, randomFruit);
+console.log(`I'm sorry. We're all out. We have ${fruits} left.`);
